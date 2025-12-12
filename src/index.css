@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,8 +10,11 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 245 30% 97%;
+    --foreground: 240 10% 15%;
+    
+    --feature-accent: 280 60% 45%;
+    --feature-bg: 260 30% 96%;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
