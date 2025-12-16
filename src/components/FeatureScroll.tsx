@@ -1,12 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import phoneDiscovery from "@/assets/phone-discovery.png";
-import phoneTastemakers from "@/assets/phone-tastemakers.png";
-import phoneCircles from "@/assets/phone-circles.png";
-import phoneConnection from "@/assets/phone-connection.png";
 
 const features = [
   {
-    image: phoneDiscovery,
+    video: "https://assets.mixkit.co/videos/preview/mixkit-woman-dancing-under-neon-lights-1230-large.mp4",
     badge: "Discovery",
     badgeIcon: "◎",
     title: "Where ",
@@ -16,7 +12,7 @@ const features = [
       "Find music you would never have heard. New artists, new voices and new ideas, surging through real people.",
   },
   {
-    image: phoneTastemakers,
+    video: "https://assets.mixkit.co/videos/preview/mixkit-dj-playing-music-at-a-concert-4307-large.mp4",
     badge: "Tastemakers",
     badgeIcon: "♫",
     title: "Follow the people who ",
@@ -26,7 +22,7 @@ const features = [
       "Anyone can build a following here, artists or fans. When you find something great, you can share it, sparking a chain reaction.",
   },
   {
-    image: phoneCircles,
+    video: "https://assets.mixkit.co/videos/preview/mixkit-group-of-friends-partying-happily-4640-large.mp4",
     badge: "Circles",
     badgeIcon: "◌",
     title: "Find your ",
@@ -36,7 +32,7 @@ const features = [
       "Every scene, every sound, every corner of culture, all in one place. Join conversations worth having and bring your circle with you.",
   },
   {
-    image: phoneConnection,
+    video: "https://assets.mixkit.co/videos/preview/mixkit-singer-in-a-concert-4466-large.mp4",
     badge: "Connection",
     badgeIcon: "⚯",
     title: "Music moves ",
@@ -89,10 +85,13 @@ const FeatureScroll = () => {
                 {/* Screen Container */}
                 <div className="relative w-full h-full bg-black rounded-[40px] overflow-hidden">
                   {features.map((feature, index) => (
-                    <img
+                    <video
                       key={index}
-                      src={feature.image}
-                      alt={feature.badge}
+                      src={feature.video}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
                       className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
                         index === activeIndex ? "opacity-100" : "opacity-0"
                       }`}
