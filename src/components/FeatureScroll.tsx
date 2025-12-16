@@ -81,19 +81,27 @@ const FeatureScroll = () => {
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
             {/* iPhone Container */}
             <div className="relative w-full max-w-md lg:w-1/2 flex justify-center">
-              <div className="relative">
-                {features.map((feature, index) => (
-                  <img
-                    key={index}
-                    src={feature.image}
-                    alt={feature.badge}
-                    className={`w-full max-w-[360px] transition-opacity duration-500 ${
-                      index === activeIndex
-                        ? "opacity-100"
-                        : "opacity-0 absolute inset-0"
-                    }`}
-                  />
-                ))}
+              {/* iPhone Frame */}
+              <div className="relative w-[280px] h-[570px] bg-black rounded-[50px] p-[10px] shadow-2xl">
+                {/* iPhone Notch */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120px] h-[30px] bg-black rounded-b-3xl z-20" />
+                
+                {/* Screen Container */}
+                <div className="relative w-full h-full bg-black rounded-[40px] overflow-hidden">
+                  {features.map((feature, index) => (
+                    <img
+                      key={index}
+                      src={feature.image}
+                      alt={feature.badge}
+                      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+                        index === activeIndex ? "opacity-100" : "opacity-0"
+                      }`}
+                    />
+                  ))}
+                </div>
+                
+                {/* Home Indicator */}
+                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-[100px] h-[4px] bg-gray-600 rounded-full" />
               </div>
             </div>
 
