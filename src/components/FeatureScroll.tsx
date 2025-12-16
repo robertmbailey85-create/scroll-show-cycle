@@ -1,8 +1,12 @@
 import { useEffect, useRef, useState } from "react";
+import videoDiscovery from "@/assets/video-discovery.mp4";
+import videoTastemakers from "@/assets/video-tastemakers.mp4";
+import videoCircles from "@/assets/video-circles.mp4";
+import videoConnection from "@/assets/video-connection.mp4";
 
 const features = [
   {
-    video: "https://assets.mixkit.co/videos/preview/mixkit-woman-dancing-under-neon-lights-1230-large.mp4",
+    video: videoDiscovery,
     badge: "Discovery",
     badgeIcon: "◎",
     title: "Where ",
@@ -12,7 +16,7 @@ const features = [
       "Find music you would never have heard. New artists, new voices and new ideas, surging through real people.",
   },
   {
-    video: "https://assets.mixkit.co/videos/preview/mixkit-dj-playing-music-at-a-concert-4307-large.mp4",
+    video: videoTastemakers,
     badge: "Tastemakers",
     badgeIcon: "♫",
     title: "Follow the people who ",
@@ -22,7 +26,7 @@ const features = [
       "Anyone can build a following here, artists or fans. When you find something great, you can share it, sparking a chain reaction.",
   },
   {
-    video: "https://assets.mixkit.co/videos/preview/mixkit-group-of-friends-partying-happily-4640-large.mp4",
+    video: videoCircles,
     badge: "Circles",
     badgeIcon: "◌",
     title: "Find your ",
@@ -32,7 +36,7 @@ const features = [
       "Every scene, every sound, every corner of culture, all in one place. Join conversations worth having and bring your circle with you.",
   },
   {
-    video: "https://assets.mixkit.co/videos/preview/mixkit-singer-in-a-concert-4466-large.mp4",
+    video: videoConnection,
     badge: "Connection",
     badgeIcon: "⚯",
     title: "Music moves ",
