@@ -73,10 +73,10 @@ const FeatureScroll = () => {
   return (
     <div
       ref={containerRef}
-      className="relative"
+      className="relative bg-background"
       style={{ height: `${features.length * 100}vh` }}
     >
-      <div className="sticky top-0 h-screen flex items-center overflow-hidden">
+      <div className="sticky top-0 h-screen flex items-center overflow-hidden bg-background">
         <div className="container mx-auto px-8 lg:px-16">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
             {/* iPhone Container */}

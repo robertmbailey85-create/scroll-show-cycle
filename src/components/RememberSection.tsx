@@ -1,6 +1,6 @@
 const RememberSection = () => {
   return (
-    <section className="bg-muted/50 rounded-3xl mx-4 lg:mx-8 p-8 lg:p-16">
+    <section className="bg-gradient-to-b from-muted/60 to-muted/30 rounded-3xl mx-4 lg:mx-8 p-8 lg:p-16">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-start justify-between gap-6 mb-8">
           <div>
